@@ -13,7 +13,7 @@ type FormData = {
  
 const Login = () => {
 
-  const from = useLocation().state || '/movies';
+  const from = useLocation().state || '/movielist';
   const {setAuthContextData} = useContext(AuthContext);
   const [hasError, setHasError] = useState(false);
   const {register, handleSubmit, formState:{errors}} = useForm<FormData>();

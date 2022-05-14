@@ -42,21 +42,6 @@ function Navbar() {
         <Link to="/" className="nav-logo-text">
           <h4>MovieFlix</h4>
         </Link>
-
-        {
-          // Menu humburguer. A ligação se dá pelo target.
-        }
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#dscatalog-navbar"
-          aria-controls="dscatalog-navbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
         <div className="nav-login-logout">
           {authContextData.authenticated && (
             <>

@@ -1,9 +1,9 @@
 import Navbar from 'components/Navbar';
 import { Redirect, Route, Router, Switch  } from 'react-router-dom';
 import MovieDetails from 'pages/MovieDetails';
-import Movies from 'pages/Movies';
 import Auth from 'pages/Admin/Auth';
 import history from 'util/history';
+import MovieList from 'pages/MovieList';
 
 const Routes = () => {
   return (
@@ -14,15 +14,18 @@ const Routes = () => {
         <Route path="/" exact>
           <Auth />
         </Route>
-        <Route path="/movies" exact>
-          <Movies />
+        <Route path="/movielist" exact>
+          <MovieList />
         </Route>
-        <Route path="/movies/:movieId">
+        <Route path="/movielist/:movieId">
           <MovieDetails />
         </Route>
         <Redirect from="/admin/auth" to="/admin/auth/login" exact/>
         <Route path="/admin/auth">
           <Auth/>
+        </Route>
+        <Route path="/movieDetails/:movieId">
+          <MovieDetails />
         </Route>
       </Switch>
     </Router>
